@@ -1,8 +1,3 @@
-var DEFAULTS = {
-  flags: 'gi',
-  patterns: {}
-};
-
 module.exports = function (file, options, cb) {
   var source = file.buffer.toString();
   var patterns = options.patterns;
@@ -10,10 +5,10 @@ module.exports = function (file, options, cb) {
   for (var pattern in patterns) {
     var regexp;
     var replacement = patterns[pattern];
-    var flags = options.flags || DEFAULTS.flags;
+    var flags = options.flags;
 
     if (replacement instanceof Array) {
-      flags = replacement[1] || '';
+      flags = replacement[1];
       replacement = replacement[0];
     }
 
