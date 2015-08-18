@@ -1,1 +1,15 @@
-bar
+__REPLACED_MAGIC_STRING_(2)__
+__REPLACED_MAGIC_STRING__
+__MAGIC_STRING__
+hello
+fo
+oooo
+(foooooooooo)
+__MAGIC_STRING__
+__REPLACED_MAGIC_STRING_(3)__
+HELLOO
+hello
+hello
+(baaaaar)
+br
+(BAR)

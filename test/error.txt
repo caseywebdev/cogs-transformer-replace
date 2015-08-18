@@ -1,1 +1,1 @@
-error
+The config for this file is busted.

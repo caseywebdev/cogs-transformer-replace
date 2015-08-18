@@ -12,7 +12,9 @@ helper.run({
       }],
       links: [],
       globs: []
-    },
+    }
+  },
+  'test/error-config.json': {
     'test/error.txt': Error
   }
 });
