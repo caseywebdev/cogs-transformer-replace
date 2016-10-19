@@ -1,13 +1,9 @@
 {
-  "in": {
-    "txt": {
-      "transformers": {
-        "name": ".",
-        "options": {
-          "patterns": {
-            "(": "unclosed parens!"
-          }
-        }
+  "transformers": {
+    "name": ".",
+    "options": {
+      "patterns": {
+        "(": "unclosed parens!"
       }
     }
   }

@@ -1,17 +1,13 @@
 {
-  "in": {
-    "txt": {
-      "transformers": {
-        "name": ".",
-        "options": {
-          "flags": "g",
-          "patterns": {
-            "__MAGIC_STRING__": ["__REPLACED_MAGIC_STRING__"],
-            "__MAGIC_STRING_\\((\\d)\\)__": "__REPLACED_MAGIC_STRING_($1)__",
-            "hel+o+": "hello",
-            "(fo{2,}|ba+r)": ["($1)", "gi"]
-          }
-        }
+  "transformers": {
+    "name": ".",
+    "options": {
+      "flags": "g",
+      "patterns": {
+        "__MAGIC_STRING__": ["__REPLACED_MAGIC_STRING__"],
+        "__MAGIC_STRING_\\((\\d)\\)__": "__REPLACED_MAGIC_STRING_($1)__",
+        "hel+o+": "hello",
+        "(fo{2,}|ba+r)": ["($1)", "gi"]
       }
     }
   }

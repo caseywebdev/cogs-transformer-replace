@@ -1,11 +1,9 @@
-module.exports = function (file, options, cb) {
-  var source = file.buffer.toString();
-  var patterns = options.patterns;
-
-  for (var pattern in patterns) {
-    var regexp;
-    var replacement = patterns[pattern];
-    var flags = options.flags;
+module.exports = ({file: {buffer}, options, options: {patterns}}) => {
+  let source = buffer.toString();
+  for (let pattern in patterns) {
+    let regexp;
+    let replacement = patterns[pattern];
+    let flags = options.flags || '';
 
     if (replacement instanceof Array) {
       flags = replacement[1];
@@ -15,11 +13,11 @@ module.exports = function (file, options, cb) {
     try {
       regexp = new RegExp(pattern, flags);
     } catch (er) {
-      return cb(new Error('/' + pattern + '/' + flags + ' ' + er.message));
+      throw new Error(`/${pattern}/${flags} ${er.message}`);
     }
 
     source = source.replace(regexp, replacement);
   }
 
-  cb(null, {buffer: new Buffer(source)});
+  return {buffer: new Buffer(source)};
 };
